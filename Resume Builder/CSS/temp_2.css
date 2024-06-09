@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Mukta:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+}
+#linkdn a{
+    color: rgb(69, 69, 171);
+    text-decoration: none;
+}
+.profile{
+    text-align: center;
+}
+#email{
+    color: red;
+}
+
+.span{
+    margin-top: 10px;
+}
+.main-container{
+    width: 100%;
+    max-width: 800px; /* Adjust the maximum width as needed */
+    margin: 20px auto;
+    border: 2px solid #333;
+    padding: 20px;
+    background-color: #fff;
+}
+h4{
+    margin-top: -10px;
+}
+#heading{
+    margin-bottom: -10px;
+}
+#stream{
+    margin-top: -20px;
+}
+#mylink{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.profile{
+    text-align: center;
+}
+
+h3{
+    font-size: 25px;
+   
+}
+.marks{
+    display: flex;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+.junior_col,.school{
+    margin-top: -20px;
+}
+.container p{
+   
+    color: rgb(75, 75, 75);
+    margin-top: -10px ;
+}
+.contacts{
+    display: flex;
+    justify-content: center;
+    margin-top: -30px;
+
+}
+.div h3{
+    border-bottom: 1px solid rgba(76, 75, 75, 0.84);
+}
+
+#skill li,#hobby li{
+    font-size: large;
+    font-weight: bold;
+    margin: 5px 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgb(202, 202, 202);
+}
+
+#hobby,#skill{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.input_container{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding:20px ;
+    width:fit-content;
+    border-radius: 20px;
+    border: 2px solid rgba(161, 158, 158, 0.781);
+}
+input{
+    margin: 0 10px;
+    font-size: 18px;
+}
+label{
+    font-size: 18px;
+}
+
+.back,.button{
+    margin: 20px 0;
+    text-align: center;
+    font-size: 18px;
+    color: rgb(254, 254, 254);
+    border-radius: 5px;
+    background-color: rgb(244, 4, 252);
+    box-shadow:2px 2px 2px 2px rgba(96, 95, 95, 0.267) ;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    
+}
+.generate{
+   display: flex;
+   justify-content: center;
+   
+}
+
+h2{
+    padding: 10px;
+    background-color: rgb(8, 128, 207);
+    color: aliceblue;
+}
+
+  
+.textarea{
+    font-size: large;
+}
+textarea{
+    width: 500px;
+}
+#btn{
+    margin: 0 auto;
+}
+
+ @media print{
+    #btn{
+        display: none;
+    }
+    .back{
+        display: none;
+    }
+    #input_container{
+        display: none;
+    }
+ }
+
+.back i{
+    padding: 10px;
+    font-size: 20px;
+}

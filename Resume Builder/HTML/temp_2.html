@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/temp_2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Template_2</title>
+</head>
+<body id="body">
+    <div class="btns">
+        <a href="home.html"><button class="back"><i class="bi bi-arrow-left-circle-fill"></i>Back</button></a>
+     </div>
+     <div class="input_container" id="input_container">
+         <!-- Personal Info -->
+         <div class="personal_info">
+             <h2> <i class="bi bi-caret-right-fill"></i> Personal Details</h2>
+             <label>Name :</label>
+             <input class="text" type="text" placeholder="Enter Your Name ...." id="newheading" autocomplete="off" >
+             <label>Email address :</label>
+             <input class="text"type="email"  id="mail" autocomplete="off" placeholder="name@example.com" >
+             <label>Phone No :</label>
+             <input class="text" type="text" placeholder="Enter Your Phone No ...." id="phone" >
+             <p>
+                 <label>Linkdn :</label>
+                 <input class="text" type="text" placeholder="linkdn...." id="link" autocomplete="off" >
+                 <label>Git Link :</label>
+                 <input class="text" type="text" placeholder="Github...." id="gitlink" autocomplete="off" >
+                 <label>Job Role :</label>
+                 <input class="text" type="text" placeholder="Job Role" id="jobr" autocomplete="off" >
+             </p>  
+             <label for="">Address : &nbsp;</label>
+             <textarea id="address" placeholder="Enter Something...." class="textarea"></textarea>
+             <button class="button" onclick= addPersonal()>Add Details</button>  
+         </div>
+ 
+         <!-- Education Input -->
+         <div class="education">
+             <h2><i class="bi bi-caret-right-fill"></i>Education</h2>
+             <label for="">School Name (10th SSC) :</label>
+             <input class="text"  type="text" placeholder="Enter Your School Name " id="ssc" autocomplete="off" >
+             <label for="">Enter Your marks :</label>
+             <input class="text" type="number" placeholder="Enter Your marks" id="sscmarks" >
+             <p>
+                 <label for="">School Name (12th HSC) :</label>
+                 <input class="text"  type="text" placeholder="Enter Your School Name " id="hsc" autocomplete="off" >
+                 <label for="">Enter Your marks :</label>
+                 <input class="text" type="number" placeholder="Enter Your marks" id="hscmarks" >
+             </p>
+ 
+             <p>
+                 <label for="">College Name :</label>
+                 <input class="text"  type="text" placeholder="Enter Your College Name " id="clg" autocomplete="off" >
+                 <label for="">Enter Your CGPA/% :</label>
+                 <input class="text" type="number" placeholder="Enter Your marks" id="clgmarks" >
+                 <label for="">Enter Your Branch:</label>
+                 <input class="text" type="text" placeholder="Enter Your branch" id="branch" >
+             </p>  
+             <button class="button" onclick= addEducation()>Add Education</button>  
+         </div>
+ 
+         <!-- Skills Section -->
+         <div class="skills">
+             <h2><i class="bi bi-caret-right-fill"></i>Skills</h2>
+             <label for="">Skills :</label>
+             <input type="text" id="nameInput" placeholder="Enter a skill">
+             <button onclick="addName()" class="button">Add Skill</button>
+         </div> 
+ 
+         <!-- Intrest Section -->
+         <div class="intrest">
+             <h2><i class="bi bi-caret-right-fill"></i>Intrest</h2>
+             <label for="">Hobbies :</label>
+             <input type="text" id="inputIntrest" placeholder="Enter Your Hobbies">
+             <button onclick="addHobby()" class="button">Add </button>
+         </div>
+ 
+         <!-- Summary section -->
+         <div class="summary">
+             <h2><i class="bi bi-caret-right-fill"></i>Summary</h2>
+             <div class="content">
+                 <label for="">Write Something about yourself : &nbsp;</label>
+                 <textarea id="textarea" placeholder="Enter Something...." class="textarea"></textarea>
+             </div>
+         </div>
+ 
+         <div class="expr">
+             <h2><i class="bi bi-caret-right-fill"></i>Experience</h2>
+             <label for="dateInput">Select a Date:</label>
+             <input type="date" id="dateInput" name="dateInput">
+             <label for="comp">Company :</label>
+             <input type="text" id="comp" placeholder="Company Name...">
+             <p class="content">
+                 <label for="">Description: &nbsp;</label>
+                 <textarea id="descrip" placeholder="Enter Something...." class="textarea"></textarea>
+             </p>
+             <button onclick="addExp()" class="button">Add Details</button>
+         </div>
+ 
+         <div class="generate">
+             <button class="button" onclick= generateCv()>Generate CV</button>
+         </div>
+     </div>
+     
+         
+ 
+ 
+     <!-- Template For Resume  -->
+     <div class="main-container" id="main_container">
+         <div class="profile">
+            <h1 id="heading">Jon Doe - <span id="job">Job Role</span></h1>
+            <div class="span">
+                <span id="add">42,Government engineering college of Aurangabad </span>|
+                <a id="phoneno" >+91 4204209211</a> |<a id="email">xyz@gmail.com</a>|
+                <a id="linkdn">www.linkdn.com</a>
+            </div>
+         </div>
+         <div class="container">
+             <!-- Main Body Content -->
+ 
+             <!-- Left Section -->
+             <div class="left_col">
+                 
+                 
+             
+                 <!-- contact section -->
+                 
+                 <div class="div">
+                     
+                     
+                    
+                 </div>
+                 
+                 <!-- Education -->
+                 <div class="div">
+                     <h3>Education</h3>
+                     <div class="college">
+                         <h4 id="college">Indian Institute of Technology</h4>
+                         <p id="stream">Computer science</p>
+                         <div class="marks">
+                             <p >CGPA : </p>
+                             <p id="cgpa"> &nbsp;9.9</p>
+                         </div>
+                     </div>
+                     <div class="junior_col">
+                         <h4 id="junior_college">Indian Institute of Technology</h4>
+                         <div class="marks">
+                             <p>Percentage:</p>
+                             <p id="per"> &nbsp;99</p>
+                         </div>
+                     </div>
+                     <div class="school">
+                         <h4 id="school">Indian Institute of Technology</h4>
+                         <div class="marks">
+                             <p>Percentage:</p>
+                             <p id="percentage"> &nbsp;99</p>
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <!-- Skills -->
+                 <div class="div">
+                     <h3>Skills</h3>
+                     <div id="skill">
+                        <!-- Add the list of skills -->
+                         
+                     </div>
+                 </div>
+             </div>
+ 
+             <!-- Right Section -->
+             <div class="right_col">
+ 
+                 <!-- Summay -->
+                 <div class="div">
+                     <h3>Career Objective</h3>
+                     <p id="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni dolores
+                          voluptatum totam rem delectus, itaque molestiae minus, laudantium mollitia dignissimos
+                           nobis reiciendis, eum adipisci tempora deserunt dolor. Itaque, culpa enim.
+                     </p>
+                 </div>
+ 
+                 <!-- Work Experience -->
+                 <div class="div" id="div">
+                     <h3>Experience</h3>
+                     <div id="experience">
+                         <h4 id="company">Google</h4>
+                         <p id="date">1 Jun</p>
+                         <p id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam dolore 
+                             sunt, doloribus, voluptatibus inventore molestiae omnis doloremque voluptatem ducimus 
+                             nam quisquam. Consequuntur, sed sit. Cumque fugit tempore veritatis. Voluptates!
+                         </p>
+                     </div>
+                 </div>
+ 
+                 <!-- Hoobies -->
+                 <div class="div" id="div">
+                     <h3>Interest</h3>
+                     <div id="hobby">
+                         
+                     </div>
+                 </div>
+                 <!--  -->
+                 
+             </div>
+             
+         </div>
+        
+         <div class="container">
+             <button class="button" onclick="prints()" id="btn">Print Resume</button>
+         </div>
+     </div>
+     
+     <script src="../Js/temp_1.js"></script>
+</body>
+</html>
