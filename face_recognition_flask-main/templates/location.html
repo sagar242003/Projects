@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location Tracker</title>
+  <style>
+    /* Your CSS styles from App.css can be added here */
+  </style>
+</head>
+<body>
+  <h1>Current Location</h1>
+  <h2 id="latitude">Latitude -</h2>
+  <h2 id="longitude">Longitude -</h2>
+  <h2 id="userAddress">User Address -</h2>
+  <button id="getAddress">Get User Address</button>
+  <hr>
+
+  <h1>GPS Tracking</h1>
+  <h2 id="GPSLatitude">Latitude -</h2>
+  <h2 id="GPSLongitude">Longitude -</h2>
+  <hr>
+  <button id="mapButton">Go to map</button>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let latitudeElem = document.getElementById("latitude");
+      let longitudeElem = document.getElementById("longitude");
+      let userAddressElem = document.getElementById("userAddress");
+      let getAddressButton = document.getElementById("getAddress");
+
+      let GPSLatitudeElem = document.getElementById("GPSLatitude");
+      let GPSLongitudeElem = document.getElementById("GPSLongitude");
+
+      const getUserCoords = () => {
+        navigator.geolocation.getCurrentPosition(position => {
+          let userLatitude = position.coords.latitude;
+          let userLongitude = position.coords.longitude;
+
+          latitudeElem.textContent = `Latitude - ${userLatitude}`;
+          longitudeElem.textContent = `Longitude - ${userLongitude}`;
+
+          getUserAddress(userLatitude, userLongitude);
+        });
+      };
+
+      const getUserAddress = async (latitude, longitude) => {
+        let url = `https://api.opencagedata.com/geocode/v1/json?key=e517bb7390dc4a3184990110f05791e8&q=${latitude}%2C+${longitude}&pretty=1&no_annotations=1`;
+        const response = await fetch(url);
+        const data = await response.json();
+
+        userAddressElem.textContent = `User Address - ${data.results[0].formatted}`;
+      };
+
+      getAddressButton.addEventListener("click", getUserCoords);
+
+      navigator.geolocation.watchPosition(position => {
+        let userGPSLatitude = position.coords.latitude;
+        let userGPSLongitude = position.coords.longitude;
+
+        GPSLatitudeElem.textContent = `Latitude - ${userGPSLatitude}`;
+        GPSLongitudeElem.textContent = `Longitude - ${userGPSLongitude}`;
+      });
+
+      const goToMap = () => {
+        // Implement functionality to navigate to the map
+      };
+
+      document.getElementById("mapButton").addEventListener("click", goToMap);
+    });
+  </script>
+</body>
+</html>
